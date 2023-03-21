@@ -667,6 +667,12 @@
             text-decoration: underline;
         }
 
+        .required {
+            position: relative;
+            top: 3px;
+            right: 2px;
+            color: #e61111;
+        }
 
         @media only screen and (max-width: 1203px) {
             .cards {
@@ -1010,17 +1016,16 @@
     <section id="contact">
         <h1 class="heading">Contact Us</h1>
         <form action="#contact" id="contactform">
-            <div class="label"><label for="name"> Name: </label></div>
+            <div class="label"><label for="name"> Name <sup class="required">*</sup></label></div>
+            <input type="text" id="name" name="name" placeholder="eg., Raghunath Ram" required>
+            
+            <div class="label"><label for="email"> Email <sup class="required">*</sup> </label></div>
+            <input type="text" id="email" name="email" placeholder="someone@example.com" required>
 
-            <input type="text" id="name" name="name" placeholder="eg., Raghunath Ram">
-            <div class="label"><label for="email"> Email: </label></div>
+            <div class="label"><label for="mobile" id="mobilelabel"> Contact No.  <sup class="required">*</sup></label></div>
+            <input type="text" id="mobile" name="mobile" placeholder="eg., +91 123-456-7899" required>
 
-            <input type="text" id="email" name="email" placeholder="someone@example.com">
-
-            <div class="label"><label for="mobile" id="mobilelabel"> Contact No. :</label></div>
-            <input type="text" id="mobile" name="mobile" placeholder="eg., +91 123-456-7899">
-
-            <div class="label"><label for="message" id="messagelabel"> Message:</label></div>
+            <div class="label"><label for="message" id="messagelabel"> Message</label></div>
             <textarea name="message" id="message" cols="50" rows="10"
                 placeholder="Any message you would like to share.."></textarea>
             <div class="btns">

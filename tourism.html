@@ -1015,19 +1015,19 @@
 
     <section id="contact">
         <h1 class="heading">Contact Us</h1>
-        <form action="#contact" id="contactform">
+        <form action="#contact" id="contactform" >
             <div class="label"><label for="name"> Name <sup class="required">*</sup></label></div>
-            <input type="text" id="name" name="name" placeholder="eg., Raghunath Ram" required>
+            <input type="text" id="name" name="name" placeholder="eg., Raghunath Ram" required class="input">
             
             <div class="label"><label for="email"> Email <sup class="required">*</sup> </label></div>
-            <input type="text" id="email" name="email" placeholder="someone@example.com" required>
+            <input type="email" id="email" name="email" placeholder="someone@example.com" required class="input">
 
             <div class="label"><label for="mobile" id="mobilelabel"> Contact No.  <sup class="required">*</sup></label></div>
-            <input type="text" id="mobile" name="mobile" placeholder="eg., +91 123-456-7899" required>
+            <input type="tel" id="mobile" name="mobile" placeholder="eg., 9876543210" required class="input" pattern="[6-9][0-9]{9}">
 
             <div class="label"><label for="message" id="messagelabel"> Message</label></div>
             <textarea name="message" id="message" cols="50" rows="10"
-                placeholder="Any message you would like to share.."></textarea>
+                placeholder="Any message you would like to share.." class="input"></textarea>
             <div class="btns">
                 <input type="submit" name="submit" class="btn" id="submit">
                 <input type="reset" name="reset" class="btn">
@@ -1089,6 +1089,8 @@
         let meter = document.getElementById("meter");
         let scrollmeter = document.getElementById("scrollmeter");
         let t = scrollmeter.style.top;
+        let sub = document.getElementById("submit");
+        let form = document.getElementById("contactform");
         ham.addEventListener("click", () => {
             if (vbar.style.display == "none") {
                 vbar.style.display = "block";
@@ -1144,6 +1146,12 @@
             let h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             let w = (window.pageYOffset * 100) / h;
             meter.style.width = `${w}%`;
+
+            // sub.addEventListener("click",()=>
+            // {
+            //     form.autocomplete = "off";
+            // });
+                // form.autocomplete = "on";
         });
 
     </script>

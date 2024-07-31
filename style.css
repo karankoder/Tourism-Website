@@ -1,0 +1,783 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    transition-property: all;
+    transition-duration: 0.8s;
+    border-radius: 20px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow: scroll;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Utility Classes */
+.heading {
+    font-size: 4.5rem;
+    margin: 30px 20px 2px 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation Bar */
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: #2d1414;
+    border-radius: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+#hamburger {
+    display: none;
+    font-size: 2rem;
+    margin: 5px;
+    position: relative;
+    left: 45vw;
+    color: wheat;
+    transition-duration: 0s;
+}
+
+.navbar>.logo {
+    font-size: 2rem;
+    position: absolute;
+    padding: 15px 15px 15px 40px;
+    left: 3vw;
+    cursor: pointer;
+}
+
+.navbar>.logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar>.logo>span {
+    color: wheat;
+}
+
+.logo a {
+    text-decoration: none;
+    color: wheat;
+    font-family: 'Playfair Display', serif;
+}
+
+.logoGlobe {
+    color: #23bae8;
+    font-size: 1.375rem;
+}
+
+.airplane {
+    color: wheat;
+    font-size: 1.3rem;
+}
+
+#divnavlinks {
+    position: relative;
+    left: 10vw;
+}
+
+#navlinks {
+    display: flex;
+}
+
+#navlinks li {
+    list-style: none;
+    margin: 10px 23px;
+}
+
+#navlinks li a {
+    color: wheat;
+    padding: 8px 23px 8px 23px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#navlinks li a:hover {
+    transform: scale(1.15);
+    color: #2d1414;
+    background-color: wheat;
+}
+
+#verticalbar {
+    display: none;
+    position: sticky;
+    top: 46px;
+    left: 0px;
+    z-index: 1;
+}
+
+#verticalbar div {
+    background-color: #2d1414;
+    border-top: 2px solid #47201a;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+
+
+#verticalbar div:hover {
+    background-color: black
+}
+
+#verticalbar a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.3rem;
+}
+
+#scrollmeter {
+    width: 100%;
+    background-color: #a7a1a1;
+    position: sticky;
+    top: 60px;
+    left: 0px;
+    height: 6px;
+    z-index: 1;
+    border-radius: 0;
+    transition-duration: 0s;
+}
+
+#meter {
+    width: 0;
+    height: 6px;
+    background-color: #0053ff;
+    border-radius: 0;
+    transition-duration: 0s;
+}
+
+/* Home Page */
+#home {
+    display: grid;
+    grid-template-columns: 5.7fr 4.3fr;
+    background-color: black;
+    height: 88vh;
+}
+
+#home #img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#home img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fde6c8;
+}
+
+#intro h1 {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 3.2rem;
+    margin: 23px;
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+}
+
+#intro p {
+    position: relative;
+    bottom: 30px;
+    font-size: 1.1rem;
+    margin: 5px;
+    text-align: center;
+}
+
+/* About Us */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: url("https://img.freepik.com/free-photo/maldives-island_74190-477.jpg") no-repeat center center/cover;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#statsbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
+#ratingbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+#stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px;
+    margin: 30px;
+    position: relative;
+    right: 2vw;
+}
+
+.statdiv {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 23px 10px 23px 10px;
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    color: white;
+    box-shadow: 0 0 10px royalblue;
+}
+
+.statdiv:hover {
+    transform: scale(1.05);
+}
+
+.statdiv div {
+    margin: 15px 5px 15px 5px;
+}
+
+.statdiv i {
+    font-size: 2.5rem;
+}
+
+#awards {
+    background-color: darkorange;
+}
+
+#clients {
+    background-color: #4CAF50;
+}
+
+#team {
+    background-color: #23b9b9;
+}
+
+#rank {
+    background-color: #c6ba6c;
+}
+
+#awards:hover {
+    background-color: #fd9a21;
+}
+
+#clients:hover {
+    background-color: #2fbc35;
+}
+
+#team:hover {
+    background-color: #28d8d8;
+}
+
+#rank:hover {
+    background-color: #d6ca7b;
+}
+
+#rating {
+    width: 90%;
+    position: relative;
+    background-color: #c5eaeceb;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #06b1ff;
+    cursor: pointer;
+}
+
+#rating:hover {
+    transform: scale(1.03);
+    background-color: #c5eaec;
+}
+
+#rating .heading {
+    font-weight: bold;
+    font-size: 1.8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#rating hr {
+    width: 85%;
+    border: 2px solid #a5e2e9;
+    position: relative;
+    left: 2.5em;
+    top: 0.2em;
+}
+
+#ratingbar {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
+    font-size: 1.1rem;
+    margin: 10px;
+}
+
+.bar {
+    height: inherit;
+    border-radius: inherit;
+    position: relative;
+    right: 1px;
+}
+
+#bar5 {
+    width: 55%;
+    background-color: #029302;
+}
+
+#bar4 {
+    width: 25%;
+    background-color: blue;
+}
+
+#bar3 {
+    width: 12%;
+    background-color: #1bb7b7;
+}
+
+#bar2 {
+    width: 6%;
+    background-color: #F9A825;
+}
+
+#bar1 {
+    width: 6%;
+    background-color: red;
+}
+
+.star {
+    color: #ff9700;
+}
+
+.left {
+    margin: 10px;
+}
+
+.middle {
+    margin: 10px 40px 10px 10px;
+    height: 13px;
+    position: relative;
+    top: 3px;
+    border-radius: 5px;
+    background-color: #d1d1d1;
+}
+
+/* Tours */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card img {
+    width: 270px;
+    height: 190px;
+}
+
+#tours {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.pexels.com/photos/355872/pexels-photo-355872.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center/cover;
+}
+
+#tours h1 {
+    font-size: 4.5rem;
+    color: wheat;
+}
+
+.card {
+    background-color: #c8c5c5b8;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: #c8c5c5;
+}
+
+.card img {
+    margin: 10px;
+    border-radius: 30px;
+}
+
+.card h2 {
+    margin: 10px;
+    font-size: 2.5rem;
+}
+
+.card p {
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+}
+
+.card button {
+    margin: 10px;
+}
+
+a {
+    color: purple;
+}
+
+.card .book {
+    background-color: #0fffd269;
+    padding: 6px 8px 6px 8px;
+    border-radius: 20px;
+    box-shadow: 0 5px gray;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.book:hover {
+    background-color: #00ffcf;
+}
+
+.book:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px gray;
+    transition-duration: 0.1s;
+}
+
+/* Contact Us */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("https://cdn.pixabay.com/photo/2019/05/10/13/28/contact-us-4193523__340.jpg") no-repeat center center/cover;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    margin: 20px;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    background-color: #abababcf;
+}
+
+#contact label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    position: relative;
+}
+
+textarea {
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 80%;
+    height: 3rem;
+}
+
+#contact input {
+    width: 80%;
+    border-radius: 0;
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    height: 25px;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 50000s ease-in-out 0s;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 82%;
+    margin-top: 10px;
+}
+
+.btns {
+    display: flex;
+    width: 70%;
+}
+
+.btn {
+    width: 50%;
+    margin: 10px;
+    background-color: darkorange !important;
+    padding: 3px 6px 6px 6px;
+    font-size: 1.2rem;
+    border-radius: 20px !important;
+    border: none;
+    outline: none;
+    box-shadow: 0px 3px black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffa02b !important;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px black;
+    transition-duration: 0.1s;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footerdetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+footer h4,
+footer li,
+footer p,
+footer #icons {
+    margin: 5px;
+}
+
+#icons a {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-top: 2px solid #454545;
+}
+
+footer .logo span {
+    font-size: 2rem;
+    color: white;
+    font-family: cursive;
+}
+
+footer .logoGlobe {
+    color: white;
+}
+
+footer .airplane {
+    color: white;
+}
+
+#top a {
+    font-size: 2.5rem;
+}
+
+#links li a:hover {
+    text-decoration: underline;
+}
+
+.required {
+    position: relative;
+    top: 3px;
+    right: 2px;
+    color: #e61111;
+}
+
+@media only screen and (max-width: 1203px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        margin-right: 5px;
+        width: 400px;
+    }
+
+    #rating .heading {
+        display: block;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #stats {
+        margin: 0;
+        padding: 0;
+    }
+
+    #statdiv {
+        font-size: 1.5rem;
+    }
+
+    #rating {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1016px) {
+    #navlinks {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #intro {
+        height: 250px;
+    }
+
+    #scrollmeter {
+        top: 46px;
+    }
+}
+
+@media only screen and (min-width: 1016px) {
+    #verticalbar div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    #contact form {
+        width: 60%;
+    }
+
+    #hamburger {
+        position: relative;
+        left: 40vw;
+    }
+
+    .footerdetails {
+        flex-direction: column;
+    }
+
+    #links,
+    #footercontact,
+    #top,
+    .footerdetails .logo,
+    #copyright {
+        margin-top: 30px;
+    }
+
+    #copyright {
+        font-size: 1rem;
+    }
+
+    #home img {
+        bottom: 0vh;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        margin: 0px 0px 30px 0px;
+        width: 250px;
+    }
+
+    .btn {
+        width: 25%;
+        font-size: 1.2rem;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    #intro {
+        height: 350px;
+    }
+}
